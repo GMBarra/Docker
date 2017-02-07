@@ -1,0 +1,125 @@
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1.0">
+  <name>dachstoy</name>
+  <description>A toy model for DaCHS regression testing</description>
+  <title>DaCHS Toy model</title>
+  <author>msdemlei@ari.uni-heidelberg.de</author>
+  <version>1.0a-pl23.44c</version>
+  <lastModified>2016-07-08T08:28:00</lastModified>
+
+  <dataType>
+  	<vodml-id>Location</vodml-id>
+  	<name>Location</name>
+  	<description>Where something is.</description>
+
+  	<attribute>
+  		<vodml-id>Location.x</vodml-id>
+  		<name>x</name>
+  		<description>One piece of a location</description>
+  		<datatype>
+  			<vodml-ref>ivoa:real</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+  	</attribute>
+
+  	<attribute>
+  		<vodml-id>Location.y</vodml-id>
+  		<name>y</name>
+  		<description>Another piece of a location</description>
+  		<datatype>
+  			<vodml-ref>ivoa:real</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+  	</attribute>
+
+   	<attribute>
+  		<vodml-id>Location.z</vodml-id>
+  		<name>z</name>
+  		<description>And still another piece of a location</description>
+  		<datatype>
+  			<vodml-ref>ivoa:real</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+  	</attribute>
+	</dataType>
+
+  <objectType>
+  	<vodml-id>Ruler</vodml-id>
+  	<name>Ruler</name>
+  	<description>Something to measure lenghts with</description>
+
+  	<attribute>
+  		<vodml-id>Ruler.width</vodml-id>
+  		<name>width</name>
+  		<description>A dimension</description>
+  		<datatype>
+  			<vodml-ref>ivoa:real</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>1</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+		</attribute>
+		
+  	<attribute>
+  		<vodml-id>Ruler.birthday</vodml-id>
+  		<name>birthday</name>
+  		<description>Everyone rejoice!</description>
+  		<datatype>
+  			<vodml-ref>ivoa:datetime</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+		</attribute>
+
+	 	<attribute>
+  		<vodml-id>Ruler.maker</vodml-id>
+  		<name>maker</name>
+  		<description>Who to go see (the whole lot of them)</description>
+  		<datatype>
+  			<vodml-ref>ivoa:string</vodml-ref>
+  		</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>-1</maxOccurs></multiplicity>
+		</attribute>
+
+		<attribute>
+			<vodml-id>Ruler.location</vodml-id>
+			<name>location</name>
+			<description>Where to find the ruler</description>
+			<datatype>
+				<vodml-ref>dachstoy:Location</vodml-ref>
+			</datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>-1</maxOccurs></multiplicity>
+		</attribute>
+
+		<reference>
+			<vodml-id>Ruler.successor</vodml-id>
+			<name>successor</name>
+			<description>Long live the king</description>
+			<datatype><vodml-ref>dachstoy:Ruler</vodml-ref></datatype>
+  		<multiplicity><minOccurs>0</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+		</reference>
+  </objectType>
+
+
+	<objectType>
+		<vodml-id>Cooler</vodml-id>
+		<name>Cooler</name>
+		<description>Something to cool Rulers with</description>
+
+		<attribute>
+			<vodml-id>Cooler.tempLimit</vodml-id>
+			<name>tempLimit</name>
+			<description>How cool can it get?</description>
+			<datatype>
+				<vodml-ref>ivoa:quantity.RealQuantity</vodml-ref>
+			</datatype>
+  		<multiplicity><minOccurs>1</minOccurs>
+  			<maxOccurs>1</maxOccurs></multiplicity>
+		</attribute>
+	</objectType>
+
+</vo-dml:model>

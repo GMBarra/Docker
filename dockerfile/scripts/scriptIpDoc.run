@@ -1,0 +1,4 @@
+#!/bin/sh
+
+tmux new-session -d -s ipythonDoc 'jupyter notebook --no-browser --port=8023 --ip=0.0.0.0 --notebook-dir=/data/documentacion/ '
+tmux detach -s ipythonDoc

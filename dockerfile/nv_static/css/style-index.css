@@ -1,0 +1,8 @@
+.panel {
+	position: relative;
+	background-color: #EDEDED;
+	margin: 0 5px;
+	min-height:70ex;
+	padding: 5px;
+	border-radius: 0 0 4px 4px;
+}

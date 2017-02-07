@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mount --bind /var/shareEdit/python/web /usr/share/pyshared/gavo/web
+mount --bind /var/shareEdit/nv_static/ /var/gavo/web/nv_static/
+mount --bind /var/shareEdit/templates/ /var/gavo/web/templates/
+mount --bind /var/shareEdit/python/base /usr/share/pyshared/gavo/base
+mount --bind /var/shareEdit/python/helpers /usr/share/pyshared/gavo/helpers
+mount --bind /var/shareEdit/python/user /usr/share/pyshared/gavo/user
+mount --bind /var/shareEdit/python/resources /usr/share/pyshared/gavo/resources
+
